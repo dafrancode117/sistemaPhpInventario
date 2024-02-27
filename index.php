@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Sistema Inventario</title>
+   <?php include_once "./inc/head.php" ?>
 </head>
+
 <body>
-   
+   <header>
+      <?php include_once "./inc/navbar.php" ?>
+   </header>
+   <?php
+      include_once "./inc/script.php"
+   ?>
 </body>
+
 </html>
