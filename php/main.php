@@ -8,8 +8,16 @@
       $pdo = new PDO("mysql:host=localhost;dbname=inventario", "root", ""); // 1Parametro: tipo de bd: servidor; bdNombre, usuario, password del usuario
       return $pdo;
    }
-
    // Insercion en la tabla categorias
    //$pdo->query("INSERT INTO categoria(categoriaNombre, categoriaUbicacion) VALUES('Prueba', 'Texto Ubicacion')");// usamos el metodo query del objeto PDO
+
+   // Verificar datos
+   function verificarDatos($filtro, $cadena){
+      if(preg_match("/^".$filtro."$/", $cadena)){ // metodo para comparar una cadena con una expresion regular
+         
+      }else{
+
+      }
+   }
 
 ?>
