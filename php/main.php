@@ -30,7 +30,7 @@
    function limpiarCadena($cadena){
       $cadena = trim($cadena); // trim elimina el espacio en blanco del inicio y el final de la cadena
       $cadena = stripslashes($cadena); // stripslashes quita las barras de un string con comillas escapadas
-      $cadena = str_ireplace("<script>", "",$cadena); // vuelve  la cadena insensible a cadenas mayusculas o minusculas, aqui evitamos que se injecte codigo javascript
+      $cadena = str_ireplace("<script>", "",$cadena); // str_ireplace reemplaza un string por otro siendo insensible a mayusculas o minisculas, aqui evitamos que se injecte codigo javascript
       $cadena = str_ireplace("</script>", "",$cadena); // aqui lo cerramos la etiqueta javascript
       // Y asi continuamos con mas validaciones
       $cadena=str_ireplace("<script src", "", $cadena);
@@ -77,5 +77,8 @@
    echo renombrarFotos($foto);*/
 
    // GENERAR PAGINADOR DE TABLAS
-   
+   function paginadorTablas($pagina, $totalPaginas, $url, $botones){
+      
+   }
+
 ?>
