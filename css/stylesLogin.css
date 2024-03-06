@@ -5,14 +5,14 @@
    font-family: serif;
 }
 
-body {
+.body_login{
    display: flex;
    justify-content: center;
    align-items: center;
    min-height: 100vh;
    background: -webkit-linear-gradient(to right, #272727, #000000);
    /* Chrome 10-25, Safari 5.1-6 */
-   background: linear-gradient(to right, #202020, #000000);
+   background: linear-gradient(to right, #52568a, #166d74);
    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
    width: 100%;
    overflow: hidden;
