@@ -1,9 +1,9 @@
-body {
+.body404error {
    margin: 0;
    padding: 0;
    text-align: center;
    font-family: sans-serif;
-   background-color: #E7FFFF;
+   background-color: #1b5858;
 }
 
 h1,
