@@ -12,6 +12,7 @@
 		  	<div class="column">
 		    	<div class="control">
 					<label>Nombres</label>
+					<!-- El atributo pattern nos permite agregar una expresion regular al valor agregado en el input -->
 				  	<input class="input" type="text" name="usuario_nombre" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{3,40}" maxlength="40" required >
 				</div>
 		  	</div>
