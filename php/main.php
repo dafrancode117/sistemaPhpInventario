@@ -1,18 +1,18 @@
 <?php
-// Conexion con una BD
-// Es mas recomendable usar PDO que mysqli, ya que PDO es una extension mas generica para otras base de datos, en cambio mysqli solo es específicamente para mysql, ademas que PDO es mas segura y facil de manter ya que proporciona una interfaz orientada a objetos
+// * Conexion con la BD
+// Es mas recomendable usar PDO que mysqli, ya que PDO es una extension mas generica para otras base de datos, en cambio mysqli solo es específicamente para mysql, ademas que PDO es mas segura y facil de mantener ya que proporciona una interfaz orientada a objetos
 
-// Definimos las variables que se va a usar:
-
+// -> Definimos el metodo para realizar una conexion a la BD
 function conexion()
 { // funcion para realizar la conexion con la BD
    $pdo = new PDO("mysql:host=localhost;dbname=inventario", "root", ""); // 1Parametro: tipo de bd: servidor; bdNombre, usuario, password del usuario
    return $pdo;
 }
+
 // Insercion en la tabla categorias
 //$pdo->query("INSERT INTO categoria(categoriaNombre, categoriaUbicacion) VALUES('Prueba', 'Texto Ubicacion')");// usamos el metodo query del objeto PDO
 
-// VERIFICAR DATOS
+// * Metodo para validar los datos de entrada del login
 function verificarDatos($filtro, $cadena)
 {
    if (preg_match("/^" . $filtro . "$/", $cadena)) { // metodo para comparar una cadena con una expresion regular
@@ -21,19 +21,18 @@ function verificarDatos($filtro, $cadena)
       return true; // ponemos true cuando la cadena no coincida devolviendo el error del filtro
    }
 }
-$nombre = "Carlos";
-
-// Ejemplo de uso del metodo de verificacion de datos
-/*if(verificarDatos("[a-zA-Z]{6,10}", $nombre)){ // recibe la expresion regular y la cadena
+// Ejemplo de uso del metodo de validacion de datos
+   /*$nombre = "Carlos";
+   if(verificarDatos("[a-zA-Z]{6,10}", $nombre)){ // recibe la expresion regular y la cadena
       echo "Los datos no coinciden";
    }*/
 
-// EVITAR INJECCIONES SQL
+// * Metodo para evitar Inyecciones SQL
 function limpiarCadena($cadena)
 {
    $cadena = trim($cadena); // trim elimina el espacio en blanco del inicio y el final de la cadena
    $cadena = stripslashes($cadena); // stripslashes quita las barras de un string con comillas escapadas
-   $cadena = str_ireplace("<script>", "", $cadena); // str_ireplace reemplaza un string por otro siendo insensible a mayusculas o minisculas, aqui evitamos que se injecte codigo javascript
+   $cadena = str_ireplace("<script>", "", $cadena); // ? str_ireplace reemplaza un string por otro siendo insensible a mayusculas o minisculas, aqui evitamos que se injecte codigo javascript
    $cadena = str_ireplace("</script>", "", $cadena); // aqui lo cerramos la etiqueta javascript
    // Y asi continuamos con mas validaciones
    $cadena = str_ireplace("<script src", "", $cadena);
@@ -64,7 +63,7 @@ function limpiarCadena($cadena)
 /*$texto = "<script>ATAQUE GG   </script>"; // Solo muestra ATAQUE GG por que no esta permitido los scripts
    echo limpiarCadena($texto);*/
 
-// RENOMBRAR FOTOS
+// * Metodo para renombrar imagenes
 function renombrarFotos($nombre)
 {
    $nombre = str_ireplace(" ", "_", $nombre);
@@ -77,14 +76,15 @@ function renombrarFotos($nombre)
    $nombre = $nombre . "_" . rand(0, 100); // rand nos da un numero aleatorio entre un rango definido que generara un numero en caso de que se suban archivos con nombre repetidos
    return $nombre;
 }
+// Ejemplo de renombramiento a una imagen
 /*$foto = "Nintendo 64/70"; // reemplazara todos los caracteres establecidos por una barra baja
    echo renombrarFotos($foto);*/
 
-// GENERAR PAGINADOR DE TABLAS
+// * Metodo para generar un paginador de tablas
 function paginadorTablas($pagina, $totalPaginas, $url, $botones)
 {
    $tabla = '<nav class="pagination is-centered is-rounded " role="navigation" aria-label="pagination">';
-   // Controlar la primera pagina
+   // -> Controlar la primera pagina
    if ($pagina <= 1) {
       $tabla .= '
          <a class="pagination-previous is-disabled" disabled>Anterior</a>
@@ -99,7 +99,7 @@ function paginadorTablas($pagina, $totalPaginas, $url, $botones)
          ';
    }
 
-   // Paginas intermedias
+   // -> Controlar las paginas intermedias
    $ci = 0;
    for($i = $pagina; $i <= $totalPaginas; $i++){
       if($ci >= $botones){
@@ -115,7 +115,7 @@ function paginadorTablas($pagina, $totalPaginas, $url, $botones)
       $ci++;
    }
 
-   // Controlar la ultima pagina
+   // -> Controlar la ultima pagina
    if ($pagina == $totalPaginas) {
       $tabla .= '
             </ul>

@@ -4,9 +4,10 @@
 </div>
 <div class="container pb-6 pt-6">
 
+	<!-- En este contenedor guardamos la vista que mandamos desde usuario_guardar.php -->
 	<div class="form-rest mb-6 mt-6"></div>
 
-	<form action="./php/usuario_guardar.php" method="POST" class="FormularioAjax" autocomplete="off" >
+	<form action="./php/usuario_guardar.php" method="POST" class="FormularioAjax" autocomplete="off">
 		<div class="columns">
 		  	<div class="column">
 		    	<div class="control">
