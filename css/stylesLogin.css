@@ -1,6 +1,7 @@
 * {
    box-sizing: border-box;
    font-family: serif;
+   padding: 10px;
 }
 
 .body_login{
@@ -73,10 +74,11 @@
 }
 
 .form-container {
-   position: absolute;
+   position: relative;
    width: 300px;
    height: 100%;
-   display: flex;
+   display: block;
+   padding: 10px;
    justify-content: center;
    align-items: center;
    flex-direction: column;
@@ -87,13 +89,14 @@
    width: 300px;
    height: 100%;
    display: flex;
+   padding: 10px;
    justify-content: center;
    align-items: center;
    flex-direction: column;
    gap: 20px;
 }
 
-.title_form-contenedor {
+.title-form-contenedor {
    font-size: 2em;
    color: #fff;
 }

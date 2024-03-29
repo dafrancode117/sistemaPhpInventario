@@ -6,8 +6,9 @@
          <span style="--clr:#89A894;"></span>
          <span style="--clr:#4B644A;"></span>
       
-         <div class="form-contenedor">
-         <h2 class="title_form-contenedor">Iniciar Sesión</h2>
+         <div style="padding: 10px;" class="form-contenedor" >
+         <h2 class="title-form-contenedor" style="font-size: 2em;
+   color: #fff;">Iniciar Sesión</h2>
          <div class="input-container">
             <input type="text" placeholder="Usuario">
          </div>
