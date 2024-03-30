@@ -1,4 +1,5 @@
 <!-- //* Vista de la pagina del Login *//  -->
+
 <body class="body_login">
    <div class="container">
       <div style="display:inline-block; padding:100px">
@@ -6,24 +7,34 @@
          <span style="--clr:#ADFCF9;"></span>
          <span style="--clr:#89A894;"></span>
          <span style="--clr:#4B644A;"></span>
-      
-         <div style="padding: 10px;" class="form-contenedor" >
-         <h2 class="title-form-contenedor" style="font-size: 2em;
-   color: #fff;">Iniciar Sesión</h2>
-         <div class="input-container">
-            <input type="text" placeholder="Usuario">
+
+         <div style="padding: 10px;" class="form-contenedor">
+            <form action="" method="POST" autocomplete="off">
+
+               <h2 class="title-form-contenedor" style="font-size: 2em; color: #fff;">Iniciar Sesión</h2>
+               <div class="input-container">
+                  <input type="text" placeholder="Usuario" name="loginUsuario" pattern="[a-zA-Z0-9]{4,20}" maxlength="20" required>
+               </div>
+               <div class="input-container">
+                  <input type="password" placeholder="Contraseña" name="loginClave" pattern="[a-zA-Z0-9$@#.\-]{7,100}" maxlength="100" required>
+               </div>
+               <div class="input-container">
+                  <input type="submit" value="Iniciar Sesión">
+               </div>
+               <div class="links-container">
+                  <a href="#">Olvidaste la contraseña?</a>
+                  <a href="#">Crear cuenta</a>
+               </div>
+
+               <?php
+               // * Codigo que nos permite identificar si hemos enviado el formulario
+               if (isset($_POST['loginUsuario']) && isset($_POST['loginClave'])) {
+                  require_once "./php/main.php";
+                  require_once "./php/iniciarSesion.php";
+               }
+               ?>
+            </form>
          </div>
-         <div class="input-container">
-            <input type="password" placeholder="Contraseña">
-         </div>
-         <div class="input-container">
-            <input type="submit" value="Iniciar Sesión">
-         </div>
-         <div class="links-container">
-            <a href="#">Olvidaste la contraseña?</a>
-            <a href="#">Crear cuenta</a>
-         </div>
-      </div>
       </div>
    </div>
 
