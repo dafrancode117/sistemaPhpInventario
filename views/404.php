@@ -1,3 +1,4 @@
+<!-- //* Vista del las paginas de error 404 *//  -->
 <div class="mained body_login columns is-flex is-flex-direction-column">
    <div class="column">
          <h1 class="error">404</h1>

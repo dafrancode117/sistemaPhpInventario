@@ -1,4 +1,5 @@
 <?php
+   // * ARCHIVO PRINCIPAL DEL SISTEMA
    // -> Incluimos las variables de sesion
    require_once "./inc/sessionStart.php";
 ?>

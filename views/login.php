@@ -1,3 +1,4 @@
+<!-- //* Vista de la pagina del Login *//  -->
 <body class="body_login">
    <div class="container">
       <div style="display:inline-block; padding:100px">

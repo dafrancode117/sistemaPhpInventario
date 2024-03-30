@@ -5,7 +5,7 @@
 // -> Definimos el metodo para realizar una conexion a la BD
 function conexion()
 { // funcion para realizar la conexion con la BD
-   $pdo = new PDO("mysql:host=localhost;dbname=inventario", "root", ""); // 1Parametro: tipo de bd: servidor; bdNombre, usuario, password del usuario
+   $pdo = new PDO("mysql:host=localhost;dbname=sistema_inventario", "root", ""); // 1Parametro: tipo de bd: servidor; bdNombre, usuario, password del usuario
    return $pdo;
 }
 

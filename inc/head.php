@@ -1,4 +1,3 @@
-<!-- ENLACES DEL HEAD DE TODO EL SISTEMA -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- Estilos del framework Bulma por CDN -->
