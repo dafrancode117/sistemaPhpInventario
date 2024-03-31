@@ -98,11 +98,13 @@
 .title-form-contenedor {
    font-size: 2em;
    color: #fff;
+   padding:10px 0px 10px
 }
 
 .input-container {
    position: relative;
    width: 100%;
+   padding: 10px 0px 10px;
 }
 
 .input-container input {

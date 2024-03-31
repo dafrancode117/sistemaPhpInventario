@@ -8,10 +8,10 @@
          <span style="--clr:#89A894;"></span>
          <span style="--clr:#4B644A;"></span>
 
-         <div style="padding: 10px;" class="form-contenedor">
+         <div  class="form-contenedor">
             <form action="" method="POST" autocomplete="off">
 
-               <h2 class="title-form-contenedor" style="font-size: 2em; color: #fff;">Iniciar Sesión</h2>
+               <h2 class="title-form-contenedor">Iniciar Sesión</h2>
                <div class="input-container">
                   <input type="text" placeholder="Usuario" name="loginUsuario" pattern="[a-zA-Z0-9]{4,20}" maxlength="20" required>
                </div>
@@ -20,10 +20,6 @@
                </div>
                <div class="input-container">
                   <input type="submit" value="Iniciar Sesión">
-               </div>
-               <div class="links-container">
-                  <a href="#">Olvidaste la contraseña?</a>
-                  <a href="#">Crear cuenta</a>
                </div>
 
                <?php

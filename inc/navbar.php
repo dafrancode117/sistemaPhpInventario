@@ -52,7 +52,7 @@
          <div class="navbar-item">
             <div class="buttons">
                <a class="button is-primary is-rounded"><strong>Mi cuenta</strong></a>
-               <a class="button is-light is-rounded">Cerrar Sesión</a>
+               <a class="button is-light is-rounded" href="index.php?vista=logout">Cerrar Sesión</a>
             </div>
          </div>
       </div>
