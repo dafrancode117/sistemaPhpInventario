@@ -1,9 +1,7 @@
 <!-- //* Vista de la pagina del Login *//  -->
 
 <body class="body_login">
-   <div class="container">
-      <div style="display:inline-block; padding:100px">
-
+   <div class="containerLog">
          <span style="--clr:#ADFCF9;"></span>
          <span style="--clr:#89A894;"></span>
          <span style="--clr:#4B644A;"></span>
@@ -31,7 +29,6 @@
                ?>
             </form>
          </div>
-      </div>
    </div>
 
 </body>
